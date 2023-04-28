@@ -20,7 +20,7 @@ let tests =
 
     testList "Acceptance" [ 
 
-      test "Should print the bank statement after some money movements in a customer account" {
+      test "Should print the bank statement after some money movements on a customer account" {
         let result = Account.init []
                       |> Account.deposit 1000.00m (on("01/10/2012"))
                       |> Result.bind (Account.deposit 2000.00m (on("01/13/2012")))
